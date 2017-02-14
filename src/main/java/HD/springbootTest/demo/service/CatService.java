@@ -6,6 +6,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import HD.springbootTest.demo.bean.Cat;
+import HD.springbootTest.demo.dao.CatDao;
 import HD.springbootTest.demo.respository.Cat2Repository;
 import HD.springbootTest.demo.respository.CatRepository;
 
@@ -17,6 +18,9 @@ public class CatService {
 	
 	@Resource
 	private Cat2Repository cat2Repository;
+	
+	@Resource
+	private CatDao catDao;
 	
 	/**
 	 * save,update ,delete 方法需要绑定事务.
@@ -50,6 +54,10 @@ public class CatService {
 	
 	public Cat findByCatName2(String catName){
 		return cat2Repository.findMyCatName2(catName);
+	}
+	
+	public Cat selectByCatName(String catName){
+		return catDao.selectByCatName(catName);
 	}
 	
 }
