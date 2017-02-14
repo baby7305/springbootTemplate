@@ -23,5 +23,5 @@ public interface Cat2Repository extends PagingAndSortingRepository<Cat, Integer>
 	 * JPQL 语句 和HQL语句是类似的.
 	 */
 	@Query("from Cat where catName=:cn")
-	public Cat findMyCatName(@Param("cn")String catName);
+	public Cat findMyCatName2(@Param("cn")String catName);
 }

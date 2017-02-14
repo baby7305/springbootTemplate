@@ -49,7 +49,7 @@ public class CatService {
 	
 	
 	public Cat findByCatName2(String catName){
-		return cat2Repository.findMyCatName(catName);
+		return cat2Repository.findMyCatName2(catName);
 	}
 	
 }
